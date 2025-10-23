@@ -1,7 +1,7 @@
 ## Project Description
 
 Simple project where the user can add synonyms to a dictionary and also search for synonyms to a specific word.
-All settings are made in line and no UI is implemented at this time.
+All settings are made in code and no UI is implemented at this time.
 
 
 ## Use
