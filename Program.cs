@@ -4,6 +4,9 @@ class Program
 {
     static void Main()
     {
+        // Running all tests
+        Test.RunAll();
+        
         // Change word to find synonyms. Solution is case-insensitive
         string searchWord = "StOr";
         
@@ -12,16 +15,6 @@ class Program
         // Create lists of synonyms. Create as many as you want.
         simpleThesaurus.AddSynonyms(new List<string> { "stor", "enorm", "gigantisk" });
         simpleThesaurus.AddSynonyms(new List<string> { "snabb", "kvick" });
-        
-        // Error Showcase: To few words added to the list
-        try
-        {
-            simpleThesaurus.AddSynonyms(new List<string> { "flitig" });
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
 
         // Print all words from the created synonyms above
         Console.WriteLine("\nAlla ord:");
