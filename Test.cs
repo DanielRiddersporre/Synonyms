@@ -70,7 +70,7 @@ public class Test
 
     /// <summary>
     /// Test Case: All synonyms in a synonym list should be connected to each other.
-    /// Expected: GetSynonyms() should return all synonyms in a synonym list.
+    /// Expected: GetSynonyms() should return all synonyms for one word in a synonym list.
     /// </summary>
     public static void GetSynonyms_ShouldGetAllSynonyms()
     {
