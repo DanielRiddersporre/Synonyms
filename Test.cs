@@ -22,7 +22,7 @@ public class Test
     public static void AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord()
     {
         // Arrange
-        SimpleThesaurus thesaurus = new();
+        IThesaurus thesaurus = new SimpleThesaurus();
 
         // Act & Assert
         try
@@ -48,7 +48,7 @@ public class Test
     public static void GetWords_ShouldReturnAllAddedWords()
     {
         // Arrange
-        SimpleThesaurus thesaurus = new();
+        IThesaurus thesaurus = new SimpleThesaurus();
         
         // Act
         thesaurus.AddSynonyms(new List<string> {"stor", "enorm", "gigantisk"});
@@ -75,7 +75,7 @@ public class Test
     public static void GetSynonyms_ShouldGetAllSynonyms()
     {
         // Arrange
-        SimpleThesaurus thesaurus = new();
+        IThesaurus thesaurus = new SimpleThesaurus();
         var words = new List<string> {"stor", "enorm", "gigantisk"};
 
         // Act
@@ -106,7 +106,7 @@ public class Test
     public static void GetSynonyms_ShouldReturnEmpty()
     {
         // Arrange
-        SimpleThesaurus thesaurus = new();
+        IThesaurus thesaurus = new SimpleThesaurus();
         thesaurus.AddSynonyms(new List<string> {"stor", "enorm", "gigantisk"});
         
         // Act
