@@ -11,7 +11,7 @@ class Program
         // Change word to find synonyms. Solution is case-insensitive
         string searchWord = "StOr";
         
-        SimpleThesaurus simpleThesaurus = new();
+        IThesaurus simpleThesaurus = new SimpleThesaurus();
 
         // Create lists of synonyms. Create as many as you want.
         simpleThesaurus.AddSynonyms(new List<string> { "stor", "enorm", "gigantisk" });
