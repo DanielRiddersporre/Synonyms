@@ -28,15 +28,15 @@ public class Test
         try
         {
             thesaurus.AddSynonyms(new List<string> { "flitig" });
-            Console.WriteLine("FAIL: AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord (no exception)");
+            Console.WriteLine("[FAIL] AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord (no exception)");
         }
         catch (ArgumentException)
         {
-            Console.WriteLine("PASS: AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord");
+            Console.WriteLine("[PASS] AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord");
         }
         catch (Exception)
         {
-            Console.WriteLine("FAIL: AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord (wrong exception");
+            Console.WriteLine("[FAIL] AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord (wrong exception");
         }
     }
 
@@ -64,8 +64,8 @@ public class Test
                          && words.Contains("upprymd");
 
         Console.WriteLine(allExists 
-            ? "PASS: GetWords_ShouldReturnAllAddedWords()" 
-            : "FAIL: GetWords_ShouldReturnAllAddedWords");
+            ? "[PASS] GetWords_ShouldReturnAllAddedWords()" 
+            : "[FAIL] GetWords_ShouldReturnAllAddedWords");
     }
 
     /// <summary>
@@ -95,8 +95,8 @@ public class Test
         }
 
         Console.WriteLine(allIsLinked 
-            ? "PASS: GetSynonyms_ShouldGetAllSynonyms()" 
-            : "FAIL: GetSynonyms_ShouldGetAllSynonyms()");
+            ? "[PASS] GetSynonyms_ShouldGetAllSynonyms()" 
+            : "[FAIL] GetSynonyms_ShouldGetAllSynonyms()");
     }
 
     /// <summary>
@@ -115,11 +115,11 @@ public class Test
         // Assert
         if (!result.Any())
         {
-            Console.WriteLine("PASS: GetSynonyms_ShouldReturnEmptyString()");
+            Console.WriteLine("[PASS] GetSynonyms_ShouldReturnEmptyString()");
         }
         else
         {
-            Console.WriteLine("FAIL: GetSynonyms_ShouldReturnEmptyString()");
+            Console.WriteLine("[FAIL] GetSynonyms_ShouldReturnEmptyString()");
         }
     }
 }
