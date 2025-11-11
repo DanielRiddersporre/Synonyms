@@ -28,15 +28,15 @@ public class Test
         try
         {
             thesaurus.AddSynonyms(new List<string> { "flitig" });
-            Console.WriteLine("[FAIL] AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord (no exception)");
+            Console.WriteLine("[FAIL] AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord() (no exception)");
         }
         catch (ArgumentException)
         {
-            Console.WriteLine("[PASS] AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord");
+            Console.WriteLine("[PASS] AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord()");
         }
         catch (Exception)
         {
-            Console.WriteLine("[FAIL] AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord (wrong exception");
+            Console.WriteLine("[FAIL] AddSynonyms_ShouldThrowArgumentExceptionOnSingleWord() (wrong exception");
         }
     }
 
